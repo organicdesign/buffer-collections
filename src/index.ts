@@ -1,6 +1,9 @@
 import { toString as uint8ArrayToString } from "uint8arrays/to-string";
 import { fromString as uint8ArrayFromString } from "uint8arrays/from-string";
 
+const toString = (data: Uint8Array) => uint8ArrayToString(data, "ascii");
+const fromString = (data: string) => uint8ArrayFromString(data, "ascii");
+
 export default class BufferMap<V> implements Map<Uint8Array, V> {
 	private data = new Map<string, V>();
 
@@ -13,7 +16,7 @@ export default class BufferMap<V> implements Map<Uint8Array, V> {
 
 		return (function* () {
 			for (const [str, value] of itr) {
-				yield [uint8ArrayFromString(str), value];
+				yield [fromString(str), value];
 			}
 		})();
 	}
@@ -22,7 +25,7 @@ export default class BufferMap<V> implements Map<Uint8Array, V> {
 		if (iterable != null) {
 			this.data = new Map((function* () {
 				for (const [buf, value] of iterable) {
-					yield [uint8ArrayToString(buf), value];
+					yield [toString(buf), value];
 				}
 			})());
 		}
@@ -33,25 +36,25 @@ export default class BufferMap<V> implements Map<Uint8Array, V> {
 	}
 
 	delete (key: Uint8Array): boolean {
-		return this.data.delete(uint8ArrayToString(key));
+		return this.data.delete(toString(key));
 	}
 
 	forEach (callbackfn: (value: V, key: Uint8Array, map: this) => void, thisArg?: any): void {
 		this.data.forEach((value: V, key: string) => {
-			callbackfn.apply(thisArg, [value, uint8ArrayFromString(key), this]);
+			callbackfn.apply(thisArg, [value, fromString(key), this]);
 		});
 	}
 
 	get (key: Uint8Array): V | undefined {
-		return this.data.get(uint8ArrayToString(key));
+		return this.data.get(toString(key));
 	}
 
 	has (key: Uint8Array): boolean {
-		return this.data.has(uint8ArrayToString(key));
+		return this.data.has(toString(key));
 	}
 
 	set (key: Uint8Array, value: V): this {
-		this.data.set(uint8ArrayToString(key), value);
+		this.data.set(toString(key), value);
 
 		return this;
 	}
@@ -69,7 +72,7 @@ export default class BufferMap<V> implements Map<Uint8Array, V> {
 
 		return (function* () {
 			for (const key of itr) {
-				yield uint8ArrayFromString(key);
+				yield fromString(key);
 			}
 		})();
 	}
