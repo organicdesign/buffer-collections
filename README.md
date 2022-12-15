@@ -1,14 +1,7 @@
-# typescript-template
+# buffer-map
 
-A template for NodeJS projects using typescript.
+An implementation of Map that uses the value of Uint8Arrays as keys instead of instances.
 
-## Setup
+## Usage
 
-1. Edit the `package.json` and change the following values:
-	* name
-	* description
-	* author
-	* version
-	* repository
-
-2. Update this `README.md` file.
+Use like an ordinary Map object using Uint8Arrays as keys.

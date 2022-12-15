@@ -1,8 +1,8 @@
 {
   "type": "module",
-  "name": "typescript-template",
-  "version": "1.0.0",
-  "description": "A template for NodeJS projects using typescript.",
+  "name": "buffer-map",
+  "version": "0.1.0",
+  "description": "An implementation of Map that uses the value of Uint8Arrays as keys instead of instances.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@code.organicdesign.nz:222/organicdesign/typescript-template.git"
+    "url": "git+https://code.organicdesign.nz/organicdesign/buffer-map.git"
   },
   "author": "Saul Boyd",
   "license": "GPL-3.0-or-later",
