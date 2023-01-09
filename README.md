@@ -2,6 +2,12 @@
 
 Implementations of JS collections that uses the value of Uint8Arrays as opposed to instances.
 
+## Install
+
+```
+npm i @organicdesign/buffer-collections
+```
+
 ## Usage
 
 ### BufferMap
