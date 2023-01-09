@@ -1,5 +1,5 @@
 import { equals } from "uint8arrays/equals";
-import BufferMap from "../src/index.js";
+import { BufferMap } from "../src/index.js";
 import dataSet from "./test-data.js";
 
 describe("assigning", () => {
