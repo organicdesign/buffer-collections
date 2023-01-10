@@ -1,4 +1,4 @@
-# buffer-collections
+# @organicdesign/buffer-collections
 
 Implementations of JS collections that uses the value of Uint8Arrays as opposed to instances.
 
