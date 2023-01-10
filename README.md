@@ -33,3 +33,11 @@ You can also type the values with TypeScript like so:
 ```typescript
 new BufferMap<string>();
 ```
+
+## TODO
+
+There are more classes that should be provided by this library but are currently not implemented.
+
+- [ ] BufferWeakMap implementation.
+- [ ] BufferSet implementation.
+- [ ] BufferWeakSet implementation.
