@@ -2,6 +2,13 @@
 
 Implementations of JS collections that uses the value of Uint8Arrays as opposed to instances.
 
+## Table of Contents
+
+- [Install](#install)
+- [Usage](#usage)
+  - [BufferMap](#buffermap)
+- [TODO](#todo)
+
 ## Install
 
 ```
