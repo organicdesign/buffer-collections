@@ -1,8 +1,9 @@
 {
   "type": "module",
   "name": "@organicdesign/buffer-collections",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Implementations of JS collections that uses the value of Uint8Arrays as opposed to instances.",
+  "keywords": ["uint8array", "buffer", "map", "collections"],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
